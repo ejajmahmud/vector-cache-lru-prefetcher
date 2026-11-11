@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vector-cache-lru-prefetcher"
+version = "0.1.0"
+description = "Predictive semantic cache prefetching nearest neighbor vector representations into memory based on agent trajectory forecasts"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+vector-cache-lru-prefetcher = "vector_cache_lru_prefetcher.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["vector_cache_lru_prefetcher*"]
